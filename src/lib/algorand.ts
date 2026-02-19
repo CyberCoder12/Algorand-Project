@@ -110,8 +110,15 @@ export async function createVoteTransactionAsync(
 // Send signed transaction
 export async function sendTransaction(signedTxn: Uint8Array): Promise<string> {
   const response = await algodClient.sendRawTransaction(signedTxn).do() as any;
-  console.log('sendRawTransaction response:', response);
-  return response.txId;
+  console.log('sendRawTransaction response:', JSON.stringify(response, null, 2));
+
+  const txId = response.txId || response.txid || (typeof response === 'string' ? response : null);
+
+  if (!txId) {
+    throw new Error('Failed to parse transaction ID from response: ' + JSON.stringify(response));
+  }
+
+  return txId;
 }
 
 // Helper to format address
@@ -151,10 +158,21 @@ export async function findVoteTransaction(
       }
     });
 
-    return match ? match.id : null;
+    return match ? (match.id || null) : null;
   } catch (e) {
     console.error('Error finding vote transaction:', e);
     return null;
+  }
+}
+
+// Wait for confirmation
+export async function waitForConfirmation(txId: string): Promise<any> {
+  try {
+    const result = await algosdk.waitForConfirmation(algodClient, txId, 4);
+    return result;
+  } catch (e) {
+    console.error('Error waiting for confirmation:', e);
+    throw new Error(`Transaction ${txId} not confirmed: ${e}`);
   }
 }
 
@@ -165,6 +183,7 @@ export const algorandUtils = {
   verifyVoterEligibility,
   createVoteTransactionAsync,
   sendTransaction,
+  waitForConfirmation,
   findVoteTransaction,
   formatAddress,
   formatTimestamp,

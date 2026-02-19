@@ -60,14 +60,20 @@ export function VoteForm({ poll, onBack, onSuccess }: VoteFormProps) {
       }
 
       // 3. Send transaction
-      const txId = await algorandUtils.sendTransaction(signedTxns[0]);
+      await algorandUtils.sendTransaction(signedTxns[0]);
+      // Use local TXID which is faster/safer than network response
+      const txId = txn.txID().toString();
       console.log('Transaction sent, ID:', txId);
 
       if (!txId) {
-        throw new Error('Failed to retrieve Transaction ID from network');
+        throw new Error('Failed to generate Transaction ID');
       }
 
-      // 4. Update local state
+      // 4. Wait for confirmation
+      await algorandUtils.waitForConfirmation(txId);
+      console.log('Transaction confirmed');
+
+      // 5. Update local state
       const success = await submitVote(poll.id, selectedOption, activeAccount.address, txId);
 
       if (success) {
@@ -278,7 +284,7 @@ export function VoteForm({ poll, onBack, onSuccess }: VoteFormProps) {
               {isLoading ? (
                 <>
                   <span className="animate-spin mr-2">⏳</span>
-                  Processing...
+                  Confirming on chain...
                 </>
               ) : (
                 'Confirm Vote'
