@@ -1,0 +1,41 @@
+Project 15: Campus Poll with Verified Voting
+
+Description:
+Create a voting platform for campus elections, club decisions, or opinion polls where only verified students can vote, each vote is counted exactly once, and results are transparent and tamper-proof. Uses Algorand for vote recording and verification.
+
+What Needs To Be Built:
+Poll creation interface (question, options, duration, eligibility criteria)
+Voting interface with wallet connection
+Vote verification system (check if user holds campus token)
+Real-time results dashboard
+Vote audit system showing all votes (without revealing voter identity)
+
+Technical Components:
+Frontend: React with charts for results
+Algorand SDK for vote transactions
+Token-gating for voter eligibility
+Optional: Smart contract for vote counting
+
+Project Outcomes:
+Building decentralized voting systems
+Implementing one-person-one-vote mechanisms
+Creating transparent yet private voting
+
+Project Requirements:
+It must meaningfully leverage the Algorand blockchain and use AlgoKit as the primary development toolkit.
+
+Real-World Application:
+Enables trustworthy campus governance and decision-making with transparent, verifiable results and prevention of vote manipulation.
+
+README.md Must Include:
+Project title and description
+Problem statement
+Live demo URL
+LinkedIn demo video URL (provide a replaceable field)
+App ID (Testnet) and Testnet explorer link (provide a replaceable field)
+Architecture overview — smart contract + frontend interaction
+Tech stack — AlgoKit, smart contract language (PyTEAL / Beaker / TEALScript), frontend
+Installation & setup instructions
+Usage guide with screenshots (provide a replaceable field)
+Known limitations
+Team members and roles (provide a replaceable field)

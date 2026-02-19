@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4AA"/>
+      <stop offset="100%" style="stop-color:#0066FF"/>
+    </linearGradient>
+    <linearGradient id="checkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#E0E0E0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#logoGradient)"/>
+  
+  <!-- Ballot box -->
+  <rect x="18" y="24" width="28" height="24" rx="3" fill="#FFFFFF" opacity="0.95"/>
+  
+  <!-- Slot on ballot box -->
+  <rect x="26" y="24" width="12" height="4" rx="1" fill="#0066FF"/>
+  
+  <!-- Vote paper (casting) -->
+  <rect x="28" y="12" width="10" height="14" rx="1" fill="#FFFFFF" transform="rotate(-10, 33, 19)"/>
+  <rect x="31" y="15" width="5" height="2" rx="0.5" fill="#00D4AA" transform="rotate(-10, 33, 19)"/>
+  
+  <!-- Checkmark on ballot -->
+  <path d="M24 38 L28 42 L36 34" stroke="url(#logoGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Decorative dots representing votes -->
+  <circle cx="12" cy="20" r="2" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="52" cy="44" r="2" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="48" cy="16" r="1.5" fill="#FFFFFF" opacity="0.4"/>
+</svg>
