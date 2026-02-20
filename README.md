@@ -79,14 +79,9 @@ Campus Poll addresses all these challenges by leveraging the Algorand blockchain
 
 ## 🌐 Live Demo
 
-**Live Demo URL**: `[PLACEHOLDER: Add your deployed application URL here]`
+**Live Demo URL**: `https://algorand-project-4i7m.vercel.app/`
 
-**LinkedIn Demo Video**: `[PLACEHOLDER: Add your LinkedIn demo video URL here]`
-
-### Testnet Information
-
-- **App ID (Testnet)**: `[PLACEHOLDER: Add your deployed App ID here]`
-- **Testnet Explorer Link**: `[PLACEHOLDER: Add your Algorand Testnet explorer link here]`
+**LinkedIn Demo Video**: `https://www.linkedin.com/posts/activity-7430437955334275072-_jb2?utm_medium=ios_app&rcm=ACoAADL1YcMB3Xko-ZO8hARn82RFg8VhP6eWyfo&utm_source=social_share_send&utm_campaign=copy_link`
 
 ---
 
@@ -241,7 +236,7 @@ Campus Poll addresses all these challenges by leveraging the Algorand blockchain
 
 ```bash
 # Clone the repository
-git clone [PLACEHOLDER: Add repository URL]
+git clone https://github.com/CyberCoder12/Algorand-Project
 cd campus-poll
 
 # Install dependencies
@@ -342,20 +337,6 @@ bun run start
 
 4. **Verify**: Click the external link to view any vote on the Algorand explorer.
 
-### Screenshots
-
-`[PLACEHOLDER: Add application screenshots here]`
-
-| Feature | Screenshot |
-|---------|------------|
-| Poll List View | `[PLACEHOLDER]` |
-| Create Poll Form | `[PLACEHOLDER]` |
-| Voting Interface | `[PLACEHOLDER]` |
-| Results Dashboard | `[PLACEHOLDER]` |
-| Audit Log | `[PLACEHOLDER]` |
-
----
-
 ## 📜 Smart Contract Details
 
 ### Contract Methods
@@ -415,11 +396,12 @@ bun run start
 
 ## 👥 Team Members
 
-| Name | Role | LinkedIn |
-|------|------|----------|
-| `[PLACEHOLDER: Name]` | `[PLACEHOLDER: Role]` | `[PLACEHOLDER: LinkedIn URL]` |
-| `[PLACEHOLDER: Name]` | `[PLACEHOLDER: Role]` | `[PLACEHOLDER: LinkedIn URL]` |
-| `[PLACEHOLDER: Name]` | `[PLACEHOLDER: Role]` | `[PLACEHOLDER: LinkedIn URL]` |
+| Name |
+|------|
+| `M Fatah Tameem Sheriff`|
+| `Samarth` |
+| `Nimish Mutyapu` |
+| `Tejas M Prasanna` |
 
 ---
 
